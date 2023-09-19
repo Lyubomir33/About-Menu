@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./css/reset.css">
+  <link rel="stylesheet" href="./css/style.css">
+  <title>About</title>
+</head>
+
+<body>
+
+  <div class="about">
+    <b>
+      <h1 class="header">Сапарева баня</h1><br>
+    </b>
+    <p class="about-text">Сапарева баня е малко градче, намиращо се в северните склонове на Рила на 15 км. от гр.
+      Дупница. </p>
+  </div>
+
+
+  <div class="container">
+
+    <div class="div-with-Img">
+      <img class="sapBania-img" src="img/sapBania.jpg" alt="">
+    </div>
+
+
+    <div class="switchable-tabs">
+
+      <div class="backgroundColor">
+        <div id="historyDiv" class="history" onclick="historyOnClick()">
+          <p class="pHistory">History</p>
+        </div>
+
+        <div id="visionDiv" class="vision" onclick="visionOnclick()">
+          <p class="pVision">Vision</p>
+        </div>
+
+        <div id="goalsDiv" class="Goals" onclick="goalsOnclick()">
+          <p class="pGoals">Goals</p>
+        </div>
+      </div>
+
+      <div id="historyID" class="content-history">
+        <h1 class="headers">History</h1>
+        <p class="text-afterHeaders">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime velit laudantium, itaque, veritatis vel accusamus minima, iusto placeat dolorum expedita veniam. Neque distinctio nobis porro atque rem quibusdam aliquam aliquid.</p>
+      </div>
+
+      <div id="visionID" class="content-vision">
+        <h1 class="headers">Vision</h1>
+        <p class="text-afterHeaders">Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde aliquam eaque
+          repudiandae ipsum dolores porro perferendis facilis necessitatibus minima, facere non nisi vitae atque
+          laudantium molestias minus assumenda ratione dicta.</p>
+      </div>
+
+      <div id="goalsID" class="content-goals">
+        <h1 class="headers">Goals</h1>
+        <p class="text-afterHeaders">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Excepturi ullam fugiat
+          ipsam voluptas placeat libero?
+          Id provident eveniet totam quas ex, repudiandae aliquam officia numquam nobis illum laborum sunt qui!]</p>
+      </div>
+
+
+
+    </div>
+
+
+
+
+  </div>
+
+
+
+  <script>
+
+
+    const historyDiv = document.getElementById('historyDiv');
+    const visionDiv = document.getElementById('visionDiv');
+    const goalsDiv = document.getElementById('goalsDiv');
+
+
+    //History Div
+    function addHistoryCover() {
+      historyDiv.style.opacity = "0.75";
+      historyDiv.style.transition = "0.5s";
+    }
+
+    function removeHistoryCove() {
+      historyDiv.style.opacity = "1";
+      historyDiv.style.transition = "0.5s";
+    }
+
+
+
+    //Vision Div
+    function addVisionHover() {
+      visionDiv.style.opacity = "0.75";
+      visionDiv.style.transition = "0.5s";
+    }
+
+    function removeVisionHover() {
+      visionDiv.style.opacity = "1";
+      visionDiv.style.transition = "0.5s";
+    }
+
+    visionDiv.addEventListener('mouseenter', addVisionHover);
+    visionDiv.addEventListener('mouseleave', removeVisionHover);
+
+    //Goals Div
+
+    function addGoalsHover() {
+      goalsDiv.style.opacity = "0.75";
+      goalsDiv.style.transition = "0.5s";
+    }
+
+    function removeGoalsHover() {
+      goalsDiv.style.opacity = "1";
+      goalsDiv.style.transition = "0.5s";
+    }
+
+
+
+    goalsDiv.addEventListener('mouseenter', addGoalsHover);
+    goalsDiv.addEventListener('mouseleave', removeGoalsHover);
+
+    //Logic for Onclick Functions
+
+    const historyID = document.getElementById('historyID');
+    const visionID = document.getElementById('visionID');
+    const goalsID = document.getElementById('goalsID');
+
+    function visionOnclick() {
+
+      historyID.style.display = "none";
+      goalsID.style.display = "none";
+      visionID.style.display = "block";
+
+      visionDiv.style.backgroundColor = "white";
+
+      visionDiv.removeEventListener('mouseenter', addVisionHover);
+      visionDiv.removeEventListener('mouseleave', removeVisionHover);
+
+      historyDiv.style.backgroundColor = "#4a5054";
+      goalsDiv.style.backgroundColor = "#4a5054";
+
+      historyDiv.addEventListener('mouseenter', addHistoryCover);
+      historyDiv.addEventListener('mouseleave', removeHistoryCove);
+
+
+    }
+
+
+    function goalsOnclick () {
+      historyID.style.display = "none";
+      visionID.style.display = "none";
+      goalsID.style.display = "block";
+
+      goalsDiv.style.backgroundColor = "white";
+
+      historyDiv.style.backgroundColor = "#4a5054";
+      visionDiv.style.backgroundColor = "#4a5054";
+      visionDiv.style.opacity = "1";
+
+      visionDiv.addEventListener('mouseenter', addVisionHover);
+    visionDiv.addEventListener('mouseleave', removeVisionHover);
+
+
+
+
+    }
+
+  
+    function historyOnClick () {
+      historyID.style.display = "block";
+      visionID.style.display = "none";
+      goalsID.style.display = "none";
+
+      historyDiv.style.backgroundColor = "white";
+
+      visionDiv.style.backgroundColor = "#4a5054";
+      goalsDiv.style.backgroundColor = "#4a5054";
+      visionDiv.style.opacity = "1";
+
+      visionDiv.addEventListener('mouseenter', addVisionHover);
+    visionDiv.addEventListener('mouseleave', removeVisionHover);
+
+    }
+
+
+
+
+
+  </script>
+
+
+</body>
+
+</html>

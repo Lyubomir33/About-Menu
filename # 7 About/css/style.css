@@ -1,0 +1,232 @@
+html {
+  background-color: #cbcbcb;
+  height: auto;
+}
+
+body {
+  padding: 20px;
+  height: auto;
+}
+
+.container {
+  height: auto;
+}
+
+.about {
+  margin-top: 50px;
+  padding: 5px;
+}
+
+.header {
+  width: 100%;
+  font-size: 35px;
+  margin: 10px auto;
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  justify-content: center;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+}
+
+
+.about-text {
+  width: 100%;
+    font-size: 20px;
+    margin: 10px auto;
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: center;
+    letter-spacing: 1.2px;
+    line-height: 1.3;
+    font-weight: 500;
+
+}
+
+
+.sapBania-img {
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+  border-radius: 5px;
+  height: 20rem;
+  object-fit: cover;
+}
+
+
+
+.content-vision {
+  display: none;
+}
+
+.content-goals {
+  display: none;
+}
+
+
+
+
+.switchable-tabs {
+  width: 100%;
+    margin: 15px auto;
+    background-color: white; 
+    height: 50vh;
+    border-radius: 5px;
+    line-height: 1.6;
+    overflow: hidden;
+}
+
+.backgroundColor {
+  background-color: white;
+    width: 100%;
+    height: 8vh;
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: space-between;
+    align-items: stretch;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.Goals, .vision, .history {
+
+  width: 100%;
+    font-size: 22px;
+    letter-spacing: 1.5px;
+    cursor: pointer;
+    display: flex;
+    align-content: space-between;
+    flex-direction: row-reverse;
+    justify-content: center;
+    
+    
+}
+
+.Goals {
+  background-color: #4a5054;
+}
+
+.vision {
+  background-color: #4a5054;
+}
+
+.history {
+  background-color: white;
+}
+
+.Goals-hover {
+  opacity: 0.75;
+  color: black;
+  transition: 0.5s;
+}
+
+.vision-hover {
+  opacity: 0.75;
+  color: black;
+  transition: 0.5s;
+}
+
+.history-hover {
+  
+  background-color: #4a5054;
+  color: black;
+  transition: 0.5s;
+}
+
+.history-hover-transtition {
+  transition: 0.5s;
+}
+
+.Goals:not(:hover) {
+  transition: 0.5s;
+}
+
+
+
+
+
+.headers {
+  margin-top: 10px ;
+  padding: 18px;
+  font-size: 20px;
+  letter-spacing: 1.5px;
+  
+}
+
+.historyBackgroundColor {
+  
+  background-color: #4a5054;
+  opacity: 0.75;
+  transition: 0.5s;
+  
+}
+
+.text-afterHeaders {
+  padding-left: 18px;
+  letter-spacing: 1.5px;
+  height: auto;
+  width: auto;
+}
+
+.pGoals, .pVision, .pHistory {
+  margin-left: 10%;
+}
+
+
+
+/* After 850px */
+
+
+
+@media (min-width: 800px) {
+
+    .container {
+      display: flex;
+      padding: 10px;
+      height: auto;
+    }
+
+    .sapBania-img {
+      margin-right: 200px;
+      height: 40vh;
+    }
+
+    .switchable-tabs {
+      margin: 0;
+      margin-left: 15px;
+      height: 40vh;
+      width: 70%;
+    }
+
+   
+    
+
+}
+
+@media (min-width: 1100px) {
+
+  .container {
+    display: flex;
+    padding-left: 60px;
+    padding-right: 60px;
+    height: auto;
+  }
+
+  .sapBania-img {
+    margin-right: 450px;
+    height: 40vh;
+  }
+
+  .switchable-tabs {
+    margin: 0;
+    margin-left: 40px;
+    height: 40vh;
+    width: 80%;
+   
+  }
+
+}
